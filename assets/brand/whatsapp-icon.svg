@@ -1,28 +1,39 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Ícone WhatsApp M2</title>
-  <desc id="desc">Ícone da M2 para WhatsApp e redes sociais</desc>
+  <title id="title">Ícone de conversa M2</title>
+  <desc id="desc">Ícone da M2 para WhatsApp e canais de atendimento.</desc>
   <defs>
-    <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071629"/>
-      <stop offset="0.55" stop-color="#0B2A4D"/>
-      <stop offset="1" stop-color="#128C7E"/>
+    <linearGradient id="bg" x1="54" y1="46" x2="458" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.54" stop-color="#071629"/>
+      <stop offset="1" stop-color="#0B2A4D"/>
     </linearGradient>
-    <linearGradient id="ring" x1="110" y1="110" x2="402" y2="402" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.55" stop-color="#25D366"/>
-      <stop offset="1" stop-color="#7C3AED"/>
+    <linearGradient id="bubble" x1="68" y1="72" x2="448" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.42" stop-color="#0EA5E9"/>
+      <stop offset="0.78" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22C55E"/>
     </linearGradient>
-    <filter id="bubbleShadow" x="70" y="78" width="372" height="372" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#020617" flood-opacity="0.26"/>
+    <linearGradient id="two" x1="298" y1="184" x2="406" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="tri" x1="220" y1="332" x2="284" y2="254" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="34" y="44" width="448" height="432" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#020617" flood-opacity="0.32"/>
     </filter>
   </defs>
+
   <rect width="512" height="512" rx="128" fill="url(#bg)"/>
-  <circle cx="394" cy="118" r="18" fill="#25D366"/>
-  <circle cx="120" cy="392" r="13" fill="#38BDF8"/>
-  <g filter="url(#bubbleShadow)">
-    <path d="M132 370L154 300C137 270 132 236 140 204C156 137 223 96 290 112C357 128 398 195 382 262C366 329 299 370 232 354C209 349 188 339 170 325L132 370Z" fill="#071629" fill-opacity="0.76"/>
-    <path d="M132 370L154 300C137 270 132 236 140 204C156 137 223 96 290 112C357 128 398 195 382 262C366 329 299 370 232 354C209 349 188 339 170 325L132 370Z" stroke="url(#ring)" stroke-width="20" stroke-linejoin="round"/>
-    <path d="M184 284V194H211L256 249L301 194H328V284H302V234L268 276H244L210 234V284H184Z" fill="#FFFFFF"/>
-    <path d="M340 326H262V305L295 281C306 273 311 267 311 259C311 250 305 245 296 245C286 245 278 250 269 260L251 243C264 227 280 219 301 219C327 219 345 234 345 256C345 274 336 286 317 300L306 308H340V326Z" fill="#38BDF8"/>
+  <g filter="url(#shadow)">
+    <path d="M82 396L108 314C91 282 87 247 97 213C119 137 195 91 273 108C351 125 401 198 386 276C371 354 299 408 219 398C197 395 176 388 157 378L82 396Z" stroke="url(#bubble)" stroke-width="22" stroke-linejoin="round"/>
+    <path d="M135 334V176H185L256 260L327 176H377V334H329V242L270 316H242L183 242V334H135Z" fill="#F8FAFC"/>
+    <path d="M410 374H286V336L338 297C355 284 364 274 364 260C364 245 354 236 338 236C321 236 307 244 293 260L258 228C279 202 305 189 343 189C387 189 417 214 417 253C417 284 401 304 370 327L351 341H410V374Z" fill="url(#two)"/>
+    <path d="M218 350L290 270V350H218Z" fill="url(#tri)"/>
+    <circle cx="206" cy="394" r="12" fill="#7C3AED"/>
+    <circle cx="256" cy="394" r="12" fill="#0EA5E9"/>
+    <circle cx="306" cy="394" r="12" fill="#22D3EE"/>
   </g>
 </svg>
