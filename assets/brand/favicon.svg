@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">M2</title>
+  <defs>
+    <linearGradient id="bg" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071629"/>
+      <stop offset="1" stop-color="#101B35"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="5" y1="5" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#bg)"/>
+  <rect x="4" y="4" width="24" height="24" rx="6" stroke="url(#stroke)" stroke-width="2"/>
+  <text x="16" y="20.8" fill="#FFFFFF" text-anchor="middle" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="11" font-weight="800">M2</text>
+</svg>
