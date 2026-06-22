@@ -1,27 +1,39 @@
 <svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">M2 Soluções com IA</title>
-  <desc id="desc">Logo horizontal da M2 Soluções com IA</desc>
+  <desc id="desc">Logo horizontal da M2 Soluções com IA sem repetição do texto M2.</desc>
   <defs>
-    <linearGradient id="m2MarkBg" x1="18" y1="18" x2="102" y2="102" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071629"/>
-      <stop offset="0.48" stop-color="#0B2A4D"/>
-      <stop offset="1" stop-color="#101B35"/>
+    <linearGradient id="orbit" x1="22" y1="18" x2="112" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.48" stop-color="#0EA5E9"/>
+      <stop offset="0.78" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#F97316"/>
     </linearGradient>
-    <linearGradient id="m2Accent" x1="24" y1="24" x2="96" y2="96" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.58" stop-color="#0EA5E9"/>
+    <linearGradient id="two" x1="78" y1="36" x2="118" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="ia" x1="320" y1="72" x2="366" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
       <stop offset="1" stop-color="#7C3AED"/>
     </linearGradient>
-    <filter id="softShadow" x="8" y="10" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#071629" flood-opacity="0.16"/>
+    <linearGradient id="tri" x1="63" y1="80" x2="82" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="150" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#071629" flood-opacity="0.18"/>
     </filter>
   </defs>
-  <g filter="url(#softShadow)">
-    <rect x="20" y="18" width="84" height="84" rx="24" fill="url(#m2MarkBg)"/>
-    <rect x="24" y="22" width="76" height="76" rx="20" stroke="url(#m2Accent)" stroke-width="4"/>
-    <path d="M38 75V44H47.5L62 62.2L76.5 44H86V75H77V57.4L65.2 72H58.8L47 57.4V75H38Z" fill="#FFFFFF"/>
-    <path d="M86 82H63V76.4L72.7 69.2C75.8 66.9 77.4 65.1 77.4 62.8C77.4 60.3 75.7 58.8 73 58.8C70.1 58.8 67.8 60.2 65.2 63.1L60.1 58.4C63.7 54.1 67.9 52 73.7 52C81.3 52 86.4 56.1 86.4 62.2C86.4 67.2 83.9 70.4 78.7 74.2L75.8 76.4H86V82Z" fill="#38BDF8"/>
+
+  <g filter="url(#shadow)">
+    <path d="M35 30C48 16 73 12 94 24" stroke="url(#orbit)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M39 88C54 104 85 106 105 89" stroke="url(#orbit)" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="96" cy="25" r="6" fill="#22D3EE"/>
+    <path d="M31 78V38H44L61 58L78 38H91V78H80V54L64 72H58L42 54V78H31Z" fill="#F8FAFC"/>
+    <path d="M113 84H77V74L91 64C96 60 99 57 99 53C99 49 96 47 92 47C87 47 84 50 80 54L72 47C78 40 84 37 94 37C106 37 114 43 114 53C114 61 110 66 102 72L97 75H113V84Z" fill="url(#two)"/>
+    <path d="M63 78L82 58V78H63Z" fill="url(#tri)"/>
   </g>
-  <text x="126" y="58" fill="#071629" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="38" font-weight="800">M2</text>
-  <text x="126" y="84" fill="#334155" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="18" font-weight="700">Soluções com IA</text>
+
+  <text x="145" y="66" fill="#071629" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="3">SOLUÇÕES COM</text>
+  <text x="333" y="66" fill="url(#ia)" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="3">IA</text>
 </svg>
