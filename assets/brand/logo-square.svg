@@ -1,37 +1,40 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">M2 Soluções com IA</title>
-  <desc id="desc">Logo quadrada da M2 Soluções com IA</desc>
+  <desc id="desc">Símbolo quadrado da marca M2 Soluções com IA.</desc>
   <defs>
-    <linearGradient id="bg" x1="120" y1="84" x2="904" y2="940" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071629"/>
-      <stop offset="0.46" stop-color="#0B2A4D"/>
-      <stop offset="1" stop-color="#101B35"/>
+    <linearGradient id="bg" x1="96" y1="80" x2="928" y2="944" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.48" stop-color="#071629"/>
+      <stop offset="1" stop-color="#0B1D36"/>
     </linearGradient>
-    <linearGradient id="accent" x1="218" y1="200" x2="806" y2="788" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.56" stop-color="#0EA5E9"/>
-      <stop offset="1" stop-color="#7C3AED"/>
+    <linearGradient id="rim" x1="78" y1="86" x2="945" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.46" stop-color="#0EA5E9"/>
+      <stop offset="0.78" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#F97316"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 440) rotate(90) scale(410)">
-      <stop stop-color="#38BDF8" stop-opacity="0.38"/>
-      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="shadow" x="120" y="128" width="784" height="784" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="38" stdDeviation="34" flood-color="#020617" flood-opacity="0.35"/>
+    <linearGradient id="two" x1="610" y1="358" x2="828" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="tri" x1="458" y1="672" x2="592" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="120" y="130" width="780" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="34" stdDeviation="30" flood-color="#020617" flood-opacity="0.42"/>
     </filter>
   </defs>
-  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
-  <rect width="1024" height="1024" rx="224" fill="url(#glow)"/>
-  <path d="M152 290C294 122 584 110 784 254" stroke="#38BDF8" stroke-width="18" stroke-linecap="round" stroke-opacity="0.25"/>
-  <path d="M150 735C306 906 594 928 804 772" stroke="#7C3AED" stroke-width="18" stroke-linecap="round" stroke-opacity="0.25"/>
+
+  <rect x="24" y="24" width="976" height="976" rx="220" fill="url(#bg)"/>
+  <rect x="34" y="34" width="956" height="956" rx="210" stroke="url(#rim)" stroke-width="20"/>
+  <path d="M246 297C356 168 584 150 750 252" stroke="url(#rim)" stroke-width="28" stroke-linecap="round"/>
+  <path d="M253 753C388 892 631 903 783 771" stroke="url(#rim)" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="764" cy="261" r="28" fill="#22D3EE"/>
+
   <g filter="url(#shadow)">
-    <rect x="188" y="176" width="648" height="648" rx="156" fill="#071629" fill-opacity="0.72"/>
-    <rect x="214" y="202" width="596" height="596" rx="132" stroke="url(#accent)" stroke-width="32"/>
-    <path d="M284 602V366H356L512 562L668 366H740V602H672V468L544 626H480L352 468V602H284Z" fill="#FFFFFF"/>
-    <path d="M742 684H516V621L610 551C641 528 657 510 657 486C657 460 639 444 611 444C582 444 558 459 532 488L480 441C516 394 560 372 620 372C696 372 748 414 748 476C748 527 722 560 670 598L640 621H742V684Z" fill="#38BDF8"/>
+    <path d="M220 668V350H322L512 566L702 350H804V668H710V486L546 686H478L314 486V668H220Z" fill="#F8FAFC"/>
+    <path d="M829 736H528V653L650 561C690 531 711 507 711 476C711 443 688 423 652 423C615 423 584 442 550 480L480 416C529 356 586 328 664 328C765 328 834 383 834 465C834 531 800 574 732 623L693 653H829V736Z" fill="url(#two)"/>
+    <path d="M447 690L604 518V690H447Z" fill="url(#tri)"/>
   </g>
-  <text x="512" y="888" fill="#FFFFFF" text-anchor="middle" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="62" font-weight="800">Soluções com IA</text>
-  <circle cx="250" cy="250" r="12" fill="#38BDF8"/>
-  <circle cx="786" cy="314" r="13" fill="#F97316"/>
-  <circle cx="760" cy="734" r="11" fill="#7C3AED"/>
 </svg>
