@@ -1,16 +1,22 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
   <title id="title">M2</title>
   <defs>
-    <linearGradient id="bg" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071629"/>
-      <stop offset="1" stop-color="#101B35"/>
+    <linearGradient id="bg" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="1" stop-color="#071629"/>
     </linearGradient>
-    <linearGradient id="stroke" x1="5" y1="5" x2="27" y2="27" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
+    <linearGradient id="rim" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.7" stop-color="#2563EB"/>
       <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="two" x1="19" y1="10" x2="27" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0284C7"/>
     </linearGradient>
   </defs>
   <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#bg)"/>
-  <rect x="4" y="4" width="24" height="24" rx="6" stroke="url(#stroke)" stroke-width="2"/>
-  <text x="16" y="20.8" fill="#FFFFFF" text-anchor="middle" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="11" font-weight="800">M2</text>
+  <rect x="3.5" y="3.5" width="25" height="25" rx="7" stroke="url(#rim)" stroke-width="2"/>
+  <path d="M7 22V10h3.6l5.4 6.2 5.4-6.2H25v12h-3.4v-7.1l-4.6 5.7h-2l-4.6-5.7V22H7Z" fill="#F8FAFC"/>
+  <path d="M27 24h-9v-2.4l3.8-2.9c1.4-1 2-1.8 2-2.7 0-1-.7-1.6-1.8-1.6-1.2 0-2.1.6-3.1 1.7l-2-1.9c1.5-1.8 3.2-2.6 5.5-2.6 3.1 0 5.2 1.7 5.2 4.2 0 2-1 3.3-3.1 4.8l-1.2.9H27V24Z" fill="url(#two)"/>
 </svg>
