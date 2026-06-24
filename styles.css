@@ -155,13 +155,42 @@ button {
 .brand-link {
   display: inline-flex;
   align-items: center;
+  gap: 0.72rem;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
   flex: 0 0 auto;
 }
 
-.brand-link img,
-.footer-logo img {
-  width: 200px;
-  height: auto;
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--color-navy-950);
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-ia {
+  background: linear-gradient(135deg, var(--color-sky-500), var(--color-violet-600));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .nav-panel {
@@ -739,6 +768,10 @@ h3 {
   color: var(--color-sky-400);
 }
 
+.footer-logo .brand-wordmark {
+  color: var(--color-white);
+}
+
 .footer-bottom {
   margin-top: 2.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -836,9 +869,17 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --header-height: 74px;
+  }
+
   .container,
   .nav-shell {
     width: min(100% - 1rem, var(--container));
+  }
+
+  .site-header {
+    padding: 0.5rem 0;
   }
 
   .section-band {
@@ -886,18 +927,48 @@ h3 {
     padding: 1.5rem;
   }
 
-  .brand-link img,
-  .footer-logo img {
-    width: 174px;
+  .brand-link,
+  .footer-logo {
+    gap: 0.6rem;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-wordmark {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-logo .brand-mark {
+    width: 48px;
+    height: 48px;
   }
 
   .nav-shell {
     min-height: 58px;
-    padding-left: 0.75rem;
+    padding: 0.45rem 0.55rem 0.45rem 0.65rem;
   }
 }
 
 @media (max-width: 420px) {
+  .brand-link,
+  .footer-logo {
+    gap: 0.5rem;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-wordmark {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+
   h1 {
     font-size: 2rem;
   }
