@@ -27,6 +27,7 @@
 }
 
 html {
+  color-scheme: only light;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
 }
@@ -146,7 +147,8 @@ button {
   gap: 1.25rem;
   border: 1px solid rgba(226, 232, 240, 0.86);
   border-radius: var(--radius-card);
-  background: rgba(255, 255, 255, 0.9);
+  color-scheme: only light;
+  background: var(--color-white);
   padding: 0.4rem 0.55rem 0.4rem 1rem;
   box-shadow: 0 16px 50px rgba(7, 22, 41, 0.12);
   backdrop-filter: blur(18px);
@@ -833,7 +835,8 @@ h3 {
     gap: 1rem;
     border: 1px solid var(--color-slate-200);
     border-radius: var(--radius-card);
-    background: rgba(255, 255, 255, 0.96);
+    color-scheme: only light;
+    background: var(--color-white);
     padding: 1rem;
     box-shadow: var(--shadow-soft);
     opacity: 0;
