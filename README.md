@@ -51,17 +51,25 @@ O conteúdo da landing fica em `index.html`, organizado por seções:
 
 Os assets ficam em:
 
+- `assets/brand/logo-mark-header.png`
+- `assets/brand/logo-header-horizontal.png`
+- `assets/brand/logo-footer-horizontal.png`
 - `assets/brand/logo-horizontal.svg`
 - `assets/brand/logo-horizontal.png`
 - `assets/brand/logo-square.svg`
 - `assets/brand/logo-square.png`
+- `assets/brand/social-preview.png`
 - `assets/brand/favicon.svg`
 - `assets/brand/favicon.png`
+- `assets/brand/favicon-96.png`
 - `assets/brand/whatsapp-icon.svg`
 - `assets/brand/whatsapp-icon.png`
+- `favicon.ico`
+- `favicon.png`
+- `apple-touch-icon.png`
 - `assets/images/hero-ai-automation.png`
 
-Os arquivos SVG são a fonte principal dos logos. Os PNGs são versões exportadas para uso em redes sociais, favicon e compatibilidade.
+O arquivo `assets/brand/logo-mark-header.png` é a fonte principal do padrão atual da marca. Os demais arquivos são derivados exportados para header/footer, redes sociais, favicon, Apple touch icon, compatibilidade e composições visuais.
 
 ## Estrutura
 
@@ -78,11 +86,11 @@ Os arquivos SVG são a fonte principal dos logos. Os PNGs são versões exportad
     └── export-assets.js
 ```
 
-## Reexportar PNGs da marca
+## Reexportar imagens da marca
 
-O projeto final não precisa de build. O script abaixo é apenas utilitário para gerar PNGs a partir dos SVGs, caso você altere a marca.
+O projeto final não precisa de build. O script abaixo é apenas utilitário para gerar os derivados a partir de `assets/brand/logo-mark-header.png`, caso você altere a marca.
 
-Ele requer o pacote `sharp` disponível no ambiente Node. Se necessário:
+Ele recria os SVGs derivados, PNGs, favicons, `favicon.ico`, imagem social, ícone customizado do WhatsApp e atualiza o badge de marca dentro do hero. Requer o pacote `sharp` disponível no ambiente Node. Se necessário:
 
 ```powershell
 npm install --save-dev sharp
