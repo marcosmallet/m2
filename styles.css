@@ -1020,16 +1020,19 @@ h3 {
 .review-main {
   display: grid;
   min-height: 100svh;
-  width: min(100% - 2rem, 760px);
+  width: min(100% - 2rem, 800px);
   margin-inline: auto;
   align-items: center;
   justify-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .review-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   width: 100%;
-  padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 6vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.25rem, 5vw, 3.5rem);
   border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: 26px;
   color: var(--color-white);
@@ -1038,13 +1041,33 @@ h3 {
   box-shadow: 0 38px 80px rgba(0, 0, 0, 0.32);
 }
 
+.review-card::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--color-sky-400), var(--color-violet-600), transparent);
+  opacity: 0.9;
+}
+
 .review-brand {
   display: inline-flex;
-  width: min(100%, 300px);
+  width: min(100%, 270px);
   margin-inline: auto;
   border-radius: var(--radius-card);
-  padding: 0.45rem 0.7rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
   background: var(--color-white);
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.18);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.review-brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(2, 6, 23, 0.26);
 }
 
 .review-brand img {
@@ -1052,30 +1075,25 @@ h3 {
   height: auto;
 }
 
-.review-icon {
-  display: grid;
-  width: 68px;
-  height: 68px;
-  margin: 2rem auto 1rem;
-  place-items: center;
-  border: 1px solid rgba(34, 211, 238, 0.42);
-  border-radius: 50%;
+.review-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1.25rem auto 0.75rem;
   color: var(--color-orange-500);
-  background: rgba(14, 165, 233, 0.12);
-  box-shadow: 0 0 0 8px rgba(14, 165, 233, 0.06);
 }
 
-.review-icon svg {
-  width: 34px;
-  height: 34px;
+.review-rating svg {
+  width: 1.35rem;
+  height: 1.35rem;
   fill: currentColor;
 }
 
 .review-eyebrow {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.45rem;
   color: var(--color-sky-400);
   font-family: "Poppins", system-ui, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1085,7 +1103,7 @@ h3 {
   margin: 0;
   color: var(--color-white);
   font-family: "Poppins", system-ui, sans-serif;
-  font-size: clamp(2.1rem, 6vw, 3.7rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.08;
 }
 
@@ -1096,21 +1114,52 @@ h3 {
 }
 
 .review-lead {
-  margin-top: 1.35rem;
+  margin-top: 0.9rem;
   color: var(--color-white);
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.12rem);
 }
 
 .review-status {
-  margin-top: 0.55rem;
+  margin-top: 0.45rem;
   color: rgba(255, 255, 255, 0.74);
   font-size: 0.95rem;
+}
+
+.review-progress {
+  width: min(100%, 320px);
+  height: 5px;
+  margin: 1rem auto 0;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.review-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-sky-400), var(--color-violet-600), var(--color-orange-500));
+  animation: review-progress 1500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.review-progress-label {
+  margin: 0.45rem 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+
+@keyframes review-progress {
+  to {
+    width: 100%;
+  }
 }
 
 .review-action {
   gap: 0.65rem;
   width: min(100%, 330px);
-  margin-top: 1.8rem;
+  margin-top: 1.25rem;
 }
 
 .review-action svg {
@@ -1124,13 +1173,13 @@ h3 {
 }
 
 .review-thanks {
-  margin: 1.8rem 0 0;
+  margin: 1.25rem 0 0;
   color: var(--color-slate-300);
   font-size: 0.95rem;
 }
 
 .review-noscript {
-  margin: 1.5rem 0 0;
+  margin: 1.1rem 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding-top: 1rem;
   color: var(--color-slate-300);
@@ -1147,15 +1196,39 @@ h3 {
 @media (max-width: 720px) {
   .review-main {
     width: min(100% - 1.25rem, 620px);
-    padding: 0.65rem 0;
+    padding: 0.5rem 0;
   }
 
   .review-card {
     border-radius: 20px;
-    padding: 1.75rem 1.1rem 2rem;
+    padding: 1.5rem 1rem 1.65rem;
   }
 
-  .review-icon {
-    margin-top: 1.5rem;
+  .review-rating {
+    margin-top: 1rem;
+  }
+
+  .review-rating svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .review-progress {
+    margin-top: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-brand {
+    transition: none;
+  }
+
+  .review-brand:hover {
+    transform: none;
+  }
+
+  .review-progress span {
+    width: 100%;
+    animation: none;
   }
 }
