@@ -223,6 +223,50 @@ async function createSocialPreview(originalLogoUri) {
   await sharp(Buffer.from(svg)).png().toFile(path.join(brandDir, "social-preview.png"));
 }
 
+async function createReviewPreview(originalLogoUri) {
+  const stars = Array.from({ length: 5 }, (_, index) => {
+    const x = 505 + index * 70;
+    return `<path d="m${x} 402 11.4 23.1 25.5 3.7-18.5 18 4.4 25.4-22.8-12-22.8 12 4.4-25.4-18.5-18 25.5-3.7L${x} 402Z"/>`;
+  }).join("");
+
+  const svg = `
+    <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+      <title id="title">Avalie sua experiência com a M2 Soluções com IA</title>
+      <desc id="desc">Imagem para compartilhamento da página de avaliação da M2 Soluções com IA.</desc>
+      <defs>
+        <linearGradient id="bar" x1="500" y1="130" x2="1020" y2="130" gradientUnits="userSpaceOnUse">
+          ${gradientStops}
+        </linearGradient>
+        <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000 108) rotate(120) scale(410 350)">
+          <stop stop-color="${colors.cyan400}" stop-opacity="0.2"/>
+          <stop offset="1" stop-color="${colors.cyan400}" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(970 560) rotate(-120) scale(460 390)">
+          <stop stop-color="${colors.violet600}" stop-opacity="0.28"/>
+          <stop offset="1" stop-color="${colors.violet600}" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1200" height="630" fill="${colors.navy900}"/>
+      <rect width="1200" height="630" fill="url(#glowA)"/>
+      <rect width="1200" height="630" fill="url(#glowB)"/>
+      <g opacity="0.12" stroke="${colors.slate200}">
+        ${Array.from({ length: 15 }, (_, index) => `<path d="M${index * 90} 0V630"/>`).join("")}
+        ${Array.from({ length: 8 }, (_, index) => `<path d="M0 ${index * 90}H1200"/>`).join("")}
+      </g>
+      <line x1="420" y1="126" x2="420" y2="516" stroke="#38BDF8" stroke-opacity="0.24" stroke-width="2"/>
+      <image href="${originalLogoUri}" x="100" y="155" width="270" height="310" preserveAspectRatio="xMidYMid meet"/>
+      <rect x="468" y="126" width="572" height="8" rx="4" fill="url(#bar)"/>
+      <text x="468" y="220" fill="${colors.slate50}" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="46" font-weight="800">M2 Solu&#231;&#245;es com IA</text>
+      <text x="468" y="310" fill="${colors.slate50}" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="42" font-weight="800">Avalie sua experi&#234;ncia</text>
+      <text x="468" y="370" fill="#CBD5E1" font-family="Open Sans, Arial, sans-serif" font-size="24" font-weight="600">Sua opini&#227;o &#233; muito importante para n&#243;s.</text>
+      <g fill="${colors.orange500}">${stars}</g>
+      <text x="468" y="538" fill="${colors.cyan400}" font-family="Poppins, Open Sans, Arial, sans-serif" font-size="21" font-weight="800" letter-spacing="2.5">OBRIGADO PELA CONFIAN&#199;A</text>
+    </svg>
+  `;
+
+  await sharp(Buffer.from(svg)).png().toFile(path.join(root, "og-avaliacao-google.png"));
+}
+
 async function createWhatsAppIcon(lightLogoUri) {
   const svg = `
     <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
@@ -299,6 +343,7 @@ async function exportAssets() {
   await createHorizontalLogo(originalLogoUri);
   await createAppIcons(lightLogoUri);
   await createSocialPreview(originalLogoUri);
+  await createReviewPreview(lightLogoUri);
   await createWhatsAppIcon(lightLogoUri);
   await updateHero(lightLogoUri);
 }
